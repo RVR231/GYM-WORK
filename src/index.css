@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  body {
+    @apply bg-[#090A0A] text-[#F3F4F6] font-sans antialiased min-h-screen overflow-x-hidden;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Remove spin buttons from number inputs for clean mobile experience */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+/* Custom athletic styling & scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0f12;
+}
+::-webkit-scrollbar-thumb {
+  background: #242830;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a404d;
+}
+
+/* Athletic Glow and High-Contrast Accents */
+.btn-accent {
+  @apply bg-[#CCFF00] text-black font-extrabold tracking-wider transition-all duration-150 active:scale-[0.98] hover:bg-[#B8E600] disabled:opacity-50 disabled:pointer-events-none;
+}
+
+.btn-secondary {
+  @apply bg-[#1F2228] text-white font-semibold transition-all duration-150 active:scale-[0.98] hover:bg-[#282C34] border border-[#2F343E];
+}
+
+.gym-card {
+  @apply bg-[#121417] border border-[#242830] rounded-2xl;
+}
+
+.gym-card-elevated {
+  @apply bg-[#181B20] border border-[#2F343E] rounded-2xl;
+}
+
+.glow-border {
+  border-color: rgba(204, 255, 0, 0.4);
+  box-shadow: 0 0 15px -3px rgba(204, 255, 0, 0.2);
+}
